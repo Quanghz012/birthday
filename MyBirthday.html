@@ -12,8 +12,8 @@
 >
     <head>
         <meta charset="UTF-8" />
-        <link rel="shortcut icon" type="image/png" href="./kem.png"/>
-        <title>Happy Birthday to you</title>
+        <link rel="shortcut icon" type="image/png" href="./birthdayCake.png"/>
+        <title>Happy Birthday</title>
         <link rel="stylesheet" href="./style.css">
         <script>
             window.open = function () {};
@@ -63,15 +63,14 @@
                 </div>
                 <div class="avatar">
                     <!-- 3. Avatar của người bạn muốn gởi lời chúc -->
-                    <img src="./Tuân.jpg" alt="" class="avatar__img" onclick="showMessage()" />
-                    <img src="./click.png" alt="Arrow" class="arrow-icon" />
+                    <img src="./MyAvatar.jpg" alt="" class="avatar__img" onclick="showMessage()" />
                     <!-- 4. Tên của người đó -->
-                    <h1 onclick="showMessage()" class="avatar__title">Phạm Mạnh Tuân</h1>
+                    <h1 onclick="showMessage()" class="avatar__title">Ngọc Tiến</h1>
                 </div>
                 
                 <!-- 5. Phần nhạc -->
                 <!-- <audio id="player" autoplay loop>
-                    <source src="./Song.mp3" type="audio/mp3">
+                    <source src="./music.mp3" type="audio/mp3">
                 </audio> -->
             </div>
         </div>
@@ -79,48 +78,17 @@
             if (document.location.search.match(/type=embed/gi)) {
                 window.parent.postMessage("resize", "*");
             }
-            function showMessage() { 
-            var audio = new Audio('birthday/MyBirthday-main/MyBirthday/Song.mp3')
-            audio.play();
+            function showMessage() {
                 // 6. Lời nhắn hiện ra khi bấm vào tên hoặc avatar
-                
                 swal({
                     title: "Lời nhắn", // Tiêu đề của popup
-                    text: "✉️ Gửi đến Tuân, hãy biết cố gắng thật nhiều để sau này không hối hận, hãy biết yêu thương bản thân để luôn có sức khỏe khỏe mạnh, hãy biết hiếu thuận gia đình để bố mẹ không bao giờ buồn, và cũng hãy đi tìm nàng công chúa của mình đi nào. Lời cuối cùng của tớ chúc cậu có tuổi 18 thành công rực rỡ. Chúc mừng sinh nhật vui vẻ! 🎉🥳🎂", // Nội dung lời nhắn
+                    text: "Gửi đến tôi, chàng trai năm 20 tuổi, hãy biết cố gắng thật nhiều để sau này không hối hận, hãy biết yêu thương bản thân để luôn có sức khỏe khỏe mạnh, hãy biết hiếu thuận gia đình để bố mẹ không bao giờ buồn, và cũng hãy đi tìm nàng công chúa của mình đi nào.", // Nội dung lời nhắn
                     button: {
                         text: "❤️️",
                     },
-                    
                 });
             }
         </script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc mừng sinh nhật!</title>
-</head>
-<body>
-    <h1>Chúc mừng sinh nhật!</h1>
-    <audio id="birthdaySong" autoplay>
-        <source src="./Song.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var audio = document.getElementById('birthdaySong');
-            // Tự động phát lại khi có sự kiện tương tác với người dùng
-            document.body.addEventListener('click', function() {
-                if (audio.paused) {
-                    audio.play();
-                }
-            });
-        });
-    </script>
-</body>
 </html>
